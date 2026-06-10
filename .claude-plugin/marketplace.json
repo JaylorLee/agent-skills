@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "my-skills",
-      "source": "./",
+      "source": "./plugins/my-skills",
       "description": "Personal skills shared across AI coding tools.",
       "version": "1.0.0",
       "author": {

@@ -5,19 +5,24 @@
 ## 结构
 
 ```
-skills/
-  <skill-name>/
-    SKILL.md        # 每个 skill 的定义(frontmatter: name + description)
 .claude-plugin/
-  marketplace.json  # 声明本仓库为一个插件市场,内含 my-skills 插件
-  plugin.json       # my-skills 插件元数据
-AGENTS.md           # 给 Codex / cursor-agent 等读 AGENTS.md 约定的工具
+  marketplace.json              # 声明本仓库为一个插件市场,内含 my-skills 插件
+plugins/
+  my-skills/
+    .claude-plugin/plugin.json  # my-skills 插件元数据
+    skills/
+      <skill-name>/
+        SKILL.md                # 每个 skill 的定义(frontmatter: name + description)
+AGENTS.md                       # 给 Codex / cursor-agent 等读 AGENTS.md 约定的工具
 ```
+
+> 结构遵循官方插件约定(每个插件在 `plugins/<名字>/`,`source` 指向它),
+> 这样 Claude 和 Codex 都能解析。
 
 ## 新增一个 skill
 
-1. 在 `skills/` 下新建目录,例如 `skills/my-new-skill/`
-2. 写 `skills/my-new-skill/SKILL.md`,frontmatter 至少包含:
+1. 在 `plugins/my-skills/skills/` 下新建目录,例如 `.../skills/my-new-skill/`
+2. 写该目录下的 `SKILL.md`,frontmatter 至少包含:
    ```markdown
    ---
    name: my-new-skill
