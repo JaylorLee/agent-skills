@@ -1,0 +1,8 @@
+{
+  "name": "my-skills",
+  "version": "1.0.0",
+  "description": "Personal skills shared across AI coding tools (Claude Code, Codex, ...).",
+  "author": {
+    "name": "jaylor"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "jaylor-skills",
+  "owner": {
+    "name": "jaylor"
+  },
+  "metadata": {
+    "description": "Personal cross-tool skill library, shared by Claude Code, Codex, and other agent CLIs from a single source of truth.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "my-skills",
+      "source": "./",
+      "description": "Personal skills shared across AI coding tools.",
+      "version": "1.0.0",
+      "author": {
+        "name": "jaylor"
+      },
+      "keywords": [
+        "skills",
+        "personal",
+        "cross-tool"
+      ],
+      "category": "workflow"
+    }
+  ]
+}
